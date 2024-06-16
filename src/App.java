@@ -9,6 +9,12 @@ public class App {
         int valorNumerico = 0;
         boolean bandera = true;
 
+        System.out.println("Poliretos Grupo 5");
+        System.out.println();
+        System.out
+                .println("Integrantes: Lenin Amangandi,Martin Davalos,Cesar Zapata,Sebastian Chicaiza,Kevin Palacios");
+        System.out.println();
+
         while (bandera) {
             System.out.print("\u001B[30m\u001B[42mIntroduce un nivel\u001B[0m" + " : ");
             String numero = sc.nextLine();
