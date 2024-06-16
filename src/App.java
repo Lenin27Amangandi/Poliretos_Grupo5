@@ -5,21 +5,28 @@ public class App {
 
         String caracter;
         Scanner sc = new Scanner(System.in);
-        System.out.print("\u001B[30m\u001B[42mIntroduce un nivel\u001B[0m" + " : ");
-        // int valorNumerico = Integer.parseInt(sc.nextLine());
-        int valorNumerico=0;;
+        // System.out.print("\u001B[30m\u001B[42mIntroduce un nivel\u001B[0m" + " : ");
+        int valorNumerico = 0;
         boolean bandera = true;
 
-        while (bandera == true) {
+        while (bandera) {
+            System.out.print("\u001B[30m\u001B[42mIntroduce un nivel\u001B[0m" + " : ");
             String numero = sc.nextLine();
+
             try {
                 valorNumerico = Integer.parseInt(numero);
-                bandera = false;
-            } catch (Exception e) {
-                System.out.println("Por favor vuelva a ingresar un numero.");
+                if (valorNumerico <= 0) {
+                    System.out.println("El número debe ser mayor que 0. Inténtalo de nuevo.");
+                    bandera = true;
+                } else {
+                    bandera = false;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Por favor ingresa un número válido.");
                 bandera = true;
             }
         }
+        // System.out.println("Has introducido: " + valorNumerico);
 
         System.out.print("\u001B[30m\u001B[42mIntroduce un caracter\u001B[0m" + " : ");
         caracter = sc.nextLine();
@@ -55,7 +62,7 @@ public class App {
 
         System.out.println();
         System.out.println("\u001B[33m Imprimir Arrays \u001B[0m");
-        // Arrays array = new Arrays();
+        Arrays array = new Arrays();
 
         System.out.println();
         System.out.println("\u001B[31mImprimir Loading\u001B[0m");
