@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class App {
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
 
         String caracter;
-        Scanner sc = new Scanner(System.in);
         // System.out.print("\u001B[30m\u001B[42mIntroduce un nivel\u001B[0m" + " : ");
         int valorNumerico = 0;
         boolean bandera = true;
@@ -67,8 +67,13 @@ public class App {
         cadenaCaracter.showFrase9For(frase);
 
         System.out.println();
-        System.out.println("\u001B[33m Imprimir Arrays \u001B[0m");
+        System.out.println("\u001B[33mImprimir Arrays\u001B[0m");
         Arrays array = new Arrays();
+        array.zcA1();
+        array.zcA2(valorNumerico, caracter.charAt(0)); 
+        array.zcA3();
+        array.zcA4();
+        array.zcA5();
 
         System.out.println();
         System.out.println("\u001B[31mImprimir Loading\u001B[0m");
